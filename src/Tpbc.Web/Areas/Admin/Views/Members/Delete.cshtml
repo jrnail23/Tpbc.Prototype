@@ -1,0 +1,18 @@
+﻿@model Tpbc.Web.Areas.Admin.Models.MemberModel
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Member</h4>
+    <hr />
+    @Html.DisplayForModel()
+
+    @using (Html.BeginForm(actionName: "DoDelete", controllerName: "Members", routeValues: new { id = Model.UserName }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

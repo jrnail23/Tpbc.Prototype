@@ -1,0 +1,12 @@
+﻿@model Tpbc.Web.Areas.Admin.Models.MemberModel
+
+<div>
+    <h4>Member</h4>
+    <hr />
+    @Html.DisplayForModel()
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {id = Model.UserName}) |
+    @Html.ActionLink("Delete", "Delete", new { id = Model.UserName }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
