@@ -6,6 +6,7 @@ using Tpbc.Web.Areas.Admin.Models;
 
 namespace Tpbc.Web.Areas.Admin.Controllers
 {
+    [Authorize]
     public class MembersController : Controller
     {
         private readonly IMemberRepository _members;
